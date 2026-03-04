@@ -22,3 +22,27 @@
 Re1# is the threat. } (22. Nxc7+ Kd8 23. Qxf6+ Kd7 24. Qxe5 Rf8 25. Qg7+ Kd6 26. Qxf8+ Kxc7 27. Na3 Kc6) 22... Re1# { Black wins. } 0-1
 
 
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2026.03.04"]
+[White "SquareFinder"]
+[Black "ryan49428"]
+[Result "1-0"]
+[WhiteElo "1287"]
+[BlackElo "1281"]
+[TimeControl "300+0"]
+[Termination "Unknown"]
+[Annotator "lichess.org"]
+[GameId "sUuYGA3S"]
+[Variant "Standard"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed, Traditional"]
+[StudyName "March 2026 Games"]
+[ChapterName "Poor Attack that I let succeed"]
+[ChapterURL "https://lichess.org/study/jUNlB2KL/jJIua6yE"]
+
+1. e4 c5 2. Nc3 Nc6 { B23 Sicilian Defense: Closed, Traditional } 3. Bb5 g6 4. f4 Bg7?! { (-0.25 → 0.32) Inaccuracy. Nd4 was best. } (4... Nd4 5. Nf3 Bg7 6. O-O Nxb5 7. Nxb5 a6 8. Nc3 b5 9. d3) 5. Bxc6 bxc6 6. Nf3 d6 7. O-O Nf6 8. Qe1 O-O 9. d3 Ba6 10. h3 c4 11. d4 Rb8 12. g4? { (0.73 → -0.53) Mistake. f5 was best. } (12. f5 Bc8 13. g4 Nd7 14. Qf2 e5 15. d5 cxd5 16. exd5 Qa5 17. Ng5 Nf6) 12... Qc7? { (-0.53 → 1.02) Mistake. c5 was best. } (12... c5) 13. Qg3? { (1.02 → -0.39) Mistake. f5 was best. } (13. f5 d5) 13... d5 14. e5 Ne4 15. Qe1 Nxc3? { (-0.30 → 1.19) Mistake. f6 was best. } (15... f6 16. Rb1 Rbd8 17. Nxe4 dxe4 18. Qxe4 c5 19. exf6 Rxf6 20. dxc5 c3 21. b4) 16. Qxc3?! { (1.19 → 0.48) Inaccuracy. bxc3 was best. } (16. bxc3) 16... c5 17. Be3 cxd4?! { (0.73 → 1.40) Inaccuracy. f6 was best. } (17... f6 18. Rae1 fxe5 19. Nxe5 e6 20. dxc5 Bxe5 21. fxe5 d4 22. Bxd4 Qc6 23. Kh2) 18. Bxd4 e6?! { (1.27 → 2.18) Inaccuracy. Bc8 was best. } (18... Bc8 19. b4 Bh6 20. Nh4 f6 21. a3 a5 22. Rab1 fxe5 23. Bxe5 Qb6+ 24. Kh2) 19. Qe3?? { (2.18 → -0.43) Blunder. Rf2 was best. } (19. Rf2 Rb7 20. Qe3 Rfb8 21. Rb1 Bf8 22. f5 h6 23. c3 Bb5 24. Rbf1 Qd8) 19... Rb7?? { (-0.43 → 2.08) Blunder. c3 was best. } (19... c3 20. b3 Bxf1 21. Rxf1 f6 22. Re1 Rbe8 23. exf6 Bxf6 24. Ne5 Bxe5 25. Bxe5) 20. Rab1?? { (2.08 → 0.07) Blunder. Rf2 was best. } (20. Rf2 Rfb8 21. Rb1 Bf8 22. h4 c3 23. b3 Rb4 24. Rd1 Rxd4 25. Nxd4 Bc5) 20... Rfb8?? { (0.07 → 2.30) Blunder. c3 was best. } (20... c3 21. Rf2 cxb2 22. Rxb2 Rxb2 23. Bxb2 Bc4 24. a3 d4 25. Bxd4 Bd5 26. Bxa7) 21. f5?? { (2.30 → -1.24) Blunder. Rf2 was best. } (21. Rf2 Rb5 22. f5 exf5 23. gxf5 Re8 24. a4 Ra5 25. Rg2 Bc8 26. e6 Bxe6) 21... exf5?? { (-1.24 → 0.65) Blunder. c3 was best. } (21... c3 22. Bxc3 Bxf1 23. Rxf1 exf5 24. gxf5 Re8 25. Rf2 f6 26. fxg6 hxg6 27. Qd4) 22. gxf5 Re8?! { (0.97 → 1.64) Inaccuracy. c3 was best. } (22... c3 23. Rf2) 23. Qg5?? { (1.64 → -0.46) Blunder. Rf2 was best. } (23. Rf2) 23... h6? { (-0.46 → 0.84) Mistake. c3 was best. } (23... c3) 24. Qg4 Qc6? { (0.82 → 2.32) Mistake. c3 was best. } (24... c3 25. Rf2) 25. f6? { (2.32 → 0.70) Mistake. e6 was best. } (25. e6 c3 26. Bxg7 gxf5 27. Qg3 f4 28. Qxf4 Rxe6 29. Bxc3 d4 30. Bxd4 Rg6+) 25... Bf8?! { (0.70 → 1.40) Inaccuracy. c3 was best. } (25... c3 26. Rf2) 26. Nh4 h5?! { (0.89 → 1.69) Inaccuracy. Kh7 was best. } (26... Kh7 27. c3) 27. Qg5?! { (1.69 → 1.05) Inaccuracy. Qg3 was best. } (27. Qg3 Kh7 28. c3 Rb5 29. Kh2 Bc8 30. Rg1 Bh6 31. Nxg6 Qe6 32. Be3 Qxh3+) 27... Bc5?? { (1.05 → 3.89) Blunder. Kh7 was best. } (27... Kh7 28. c3 Rb5 29. Qg3 Bc8 30. Rf2 Bh6 31. Re1 Qe6 32. Kh2 Rg8 33. a4) 28. Nxg6?? { (3.89 → 0.00) Blunder. Bxc5 was best. } (28. Bxc5 Qxc5+ 29. Kh2 Kh7 30. Nxg6 fxg6 31. f7 Qe7 32. Qxe7 Rbxe7 33. fxe8=R Rxe8) 28... Bxd4+ 29. Kh2?? { (0.00 → -2.45) Blunder. Kh1 was best. } (29. Kh1 fxg6 30. Qxg6+ Kh8 31. Rf5 Rh7 32. Rxh5 Re7 33. f7 Qxg6 34. f8=Q+ Qg8) 29... Kh7?? { (-2.45 → Mate in 2) Checkmate is now unavoidable. fxg6 was best. } { Does taking the knight work?
+?
+Yes. Blocking with the rook is not the only response to Qxg6. } (29... fxg6 30. Qxg6+ Kh8 31. Rf5 Rh7 32. Rxh5 Bxe5+ 33. Kg1 Bh2+ 34. Kxh2 Qc7+ 35. Kh1) 30. Nf8+ Rxf8 31. Qg7# { White wins. } 1-0
+
+
