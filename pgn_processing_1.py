@@ -56,6 +56,8 @@ fen: %s
 orientation: white
 ```"""
 
+rarrow = "→"
+
 #pgn_files = glob.glob("*.pgn")
 #pgn = open(fn)
 
@@ -112,7 +114,6 @@ def eliminate_best_move(movein):
 
 def cut_eval_change(str_in):
     test = str_in.strip()
-    rarrow = "→"
     if rarrow not in test:
         return str_in
     else:
@@ -191,21 +192,34 @@ for game in games:
         #print("cur_com:")
         #print(cur_com)
         clean_com = find_non_standard_comment(cur_com).strip()
+        debug = False
         if clean_com:
-            print("clean:")
-            print(clean_com)
-            q,a = break_comments(clean_com)
-            if not a:
-                a = "no answer given"
-            q = q.replace("%","\\%")
-            a = a.replace("%","\\%")
-            #print("question: %s" % q)
-            #print("answer: %s" % a)
-            out(template % board.fen())
-            out(q)
-            out("?")
-            out(a)
-            out("")
+            clean2 = find_non_standard_comment(clean_com)
+            if debug:
+                print("raw:")
+                print(cur_com)
+                print("clean:")
+                print(clean_com)
+                print("clean2:")
+                print(clean2)
+
+            if clean2:
+                print("raw:")
+                print(cur_com)
+                print("clean2:")
+                print(clean2)
+                q,a = break_comments(clean2)
+                if not a:
+                    a = "no answer given"
+                q = q.replace("%","\\%")
+                a = a.replace("%","\\%")
+                #print("question: %s" % q)
+                #print("answer: %s" % a)
+                out(template % board.fen())
+                out(q)
+                out("?")
+                out(a)
+                out("")
         board.push(node.move)
         # Check for specifically formatted evaluation comments
         #if node.comment and "[%eval" in node.comment:
