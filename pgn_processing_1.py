@@ -107,9 +107,9 @@ def elim_eco_line(line):
 
 
 def eliminate_best_move(movein):
-    out1 = best_move_1.sub("", movein)
-    out2 = best_move_2.sub("",out1)
-    return out2
+    out1 = best_move.sub("", movein)
+    #out2 = best_move_2.sub("",out1)
+    return out1
 
 
 def cut_eval_change(str_in):
@@ -162,8 +162,12 @@ def break_comments(comment):
 get_rid_of_eval = re.compile(r'\[.*eval.*?\]')
 std_comment = re.compile(r"(Inaccuracy|Blunder|Mistake).*?[was best]\.")
 #best_move_1 = re.compile("[BNRQK]*[a-h][1-8]")
-best_move_1 = re.compile(r"[BNRQK]x*[a-h][1-8]\+* was best\.")
-best_move_2 = re.compile(r"[a-h]x*[1-8] was best\.")
+valid_move_pat = r"[NBKRQ]?[a-h]?[1-8]?x?[a-h][1-8](=[NBKRQ])?[+#]?$|^[O0]-[O0](-[O0])?[+#]?"
+best_move_pat = valid_move_pat + r" was best\."
+#best_move_1 = re.compile(r"[BNRQK]x*[a-h][1-8]\+* was best\.")
+#best_move_2 = re.compile(r"[a-h]x*[1-8] was best\.")
+#best_move = re.compile(best_move_pat)
+best_move = re.compile(r"[NBKRQ]?[a-h]?[1-8]?x?[a-h][1-8](=[NBKRQ])?[+#]? was best\.")
 ECO_pat = re.compile("^[A-E]\\d+")
 #eco_test = "C44 Scotch Game: Scotch Gambit, London Defense"
 #ECO_pat.search(eco_test)
@@ -204,8 +208,8 @@ for game in games:
                 print(clean2)
 
             if clean2:
-                print("raw:")
-                print(cur_com)
+                #print("raw:")
+                #print(cur_com)
                 print("clean2:")
                 print(clean2)
                 q,a = break_comments(clean2)
