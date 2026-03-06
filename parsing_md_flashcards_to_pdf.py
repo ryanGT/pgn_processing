@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 import re, os, copy
 from krauss_misc import txt_mixin
@@ -37,10 +37,6 @@ fn = args.file_in
 # The last one will end at the EOF
 
 # ## Latex Templates
-
-# In[206]:
-
-
 old_header = r"""\documentclass[12pt]{article}
 \usepackage[margin=0.5in,footskip=0.25in,letterpaper]{geometry}
 \usepackage{skak}
@@ -49,10 +45,6 @@ old_header = r"""\documentclass[12pt]{article}
 
 \begin{document}"""
 
-
-# In[235]:
-
-
 header = r"""\documentclass[12pt]{article}
 \usepackage[margin=0.3in,papersize={3.0in,5.0in},footskip=0.15in]{geometry}%footskip=0.2in,
 %\usepackage{skak}
@@ -60,10 +52,6 @@ header = r"""\documentclass[12pt]{article}
 \usepackage{graphicx}
 \linespread{1.2}
 \begin{document}"""
-
-
-# In[236]:
-
 
 board_template = r"""{\Huge
 
@@ -84,10 +72,6 @@ FEN: %s
 }
 """
 
-
-# In[237]:
-
-
 old_q_template = r"""{\Huge
 %s \\
 \vspace{0.2in}
@@ -107,9 +91,6 @@ FEN: %s
 """
 
 
-# In[238]:
-
-
 q_template = r"""{\large
 %s \\
 \vspace{0.2in}
@@ -125,10 +106,6 @@ q_template = r"""{\large
 """
 
 
-
-# In[239]:
-
-
 solution_template = r"""{\large
 Solution
 }
@@ -139,9 +116,6 @@ Solution
 %s
 }
 """
-
-
-# In[240]:
 
 
 old_solution_template = r"""\pagebreak
@@ -249,6 +223,12 @@ class chess_chunk_parser(object):
         #what is left should be the comments:
         self.comments = copy.copy(self.list)
         self.break_comments()
+        self.escape_pound()
+
+
+    def escape_pound(self):
+        self.question = self.question.replace("#","\\#")
+        self.answer = self.answer.replace("#","\\#")
 
 
     def break_comments(self):
@@ -280,6 +260,7 @@ class chess_chunk_parser(object):
         else:
             return "black"
 
+
     def build_latex(self):
         move_str = self.move_color()
         #inverse,smallboard,setfen=r1bq1rk1/p2pppbp/2p2np1/8/3BP3/2N2Q2/PPP2PPP/R3KB1R b KQ - 3 9
@@ -297,9 +278,6 @@ class chess_chunk_parser(object):
 
 
 
-# In[255]:
-
-
 list_of_chunks = []
 
 for s, e in zip(start_inds,end_inds):
@@ -307,15 +285,6 @@ for s, e in zip(start_inds,end_inds):
     list_of_chunks.append(cur_chunk)
 
 
-# In[256]:
-
-
-list_of_chunks
-
-
-# ## Parse Chunks
-
-# In[257]:
 
 
 mychunks = []
@@ -325,15 +294,6 @@ for lines in list_of_chunks:
     print(mychunk)
     mychunk.parse()
     mychunks.append(mychunk)
-
-
-# In[258]:
-
-
-print(mychunk.build_latex())
-
-
-# In[259]:
 
 
 myout = copy.copy(header)
@@ -350,74 +310,12 @@ for chunk in mychunks:
 myout += '\\end{document}'
 
 
-# In[260]:
-
-
-print(myout)
-
-
-# In[261]:
-
-
-fn = 'latex_test.tex'
-
-
-# In[262]:
-
-
-txt_mixin.dump(fn, [myout])
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
+fno, ext = os.path.splitext(fn)
+tex_name = fno + '.tex'
+txt_mixin.dump(tex_name, [myout])
+latex_cmd = "pdflatex %s" % tex_name
+os.system(latex_cmd)
+print(latex_cmd)
 
 
 

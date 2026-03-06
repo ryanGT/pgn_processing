@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 import chess
 import glob
@@ -239,3 +239,6 @@ txt_mixin.dump(md_out_name, out_list)
 
 
 
+pdf_cmd = "./parsing_md_flashcards_to_pdf.py %s" % md_out_name
+print(pdf_cmd)
+os.system(pdf_cmd)
